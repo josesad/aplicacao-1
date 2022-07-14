@@ -2,14 +2,14 @@
     <h1 id="title">CADASTRE-SE</h1>
 
     <div class="formulario">
-        <form action="">
+        <form #form="ngForm" [formGroup]="usuarioForm" (submit)="submit()">
             
-            <button class="btn-login" routerLink="/login">CADASTRAR</button>
+            <button class="btn-login" (click)="submit()" routerLink="/login">CADASTRAR</button>
         </form>
     </div>
 
     <div class="div-botoes">
-    <button class="btn-register" routerLink="/home">VOLTAR PARA HOME</button>
+    <button class="btn-register"  routerLink="/home">VOLTAR PARA HOME</button>
     </div>
 
 </section>
