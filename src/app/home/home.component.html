@@ -2,20 +2,28 @@
     <h1 id="title">OLÁ VISITANTE!</h1>
 
     <div class="formulario">
-        <form action="">
-            
-            <input type="email" class="form-control" id="email" name="email"
-                [(ngModel)]="usuario.email" placeholder="Digite seu e-mail">
-            <input type="password" class="form-control" id="senha" name="senha"
-                [(ngModel)]="usuario.senha" placeholder="Digite sua senha">
-            
-            <button class="btn-login" routerLink="/area-logado">FAZER LOGIN</button>
-        
+        <form #formulario="ngForm" (ngSubmit)="realizarLogin(formulario)">
+
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="usuario.email"
+                #email="ngModel" required placeholder="Digite seu e-mail">
+
+            <div *ngIf="!email.valid && email.touched">
+                O e-mail é obrigatório!
+            </div>
+
+            <input type="password" class="form-control" id="senha" name="senha" [(ngModel)]="usuario.senha"
+                #senha="ngModel" required placeholder="Digite sua senha">
+
+            <div *ngIf="!senha.valid && senha.touched">
+                A senha é obrigatória
+            </div>
+
+            <button [disabled]="!formulario.valid" type="submit" class="btn-login">FAZER LOGIN</button>
         </form>
     </div>
 
     <div class="div-botoes">
-    <button class="btn-register" routerLink="/register">ME REGISTRAR</button>
+        <button class="btn-register" routerLink="/register">ME REGISTRAR</button>
     </div>
 
 </section>

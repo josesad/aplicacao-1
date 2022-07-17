@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./area-logado.component.css']
 })
 export class AreaLogadoComponent implements OnInit {
-
+  public titulo = "Seja bem vindo!";
+  
   constructor() { }
 
   ngOnInit(): void {

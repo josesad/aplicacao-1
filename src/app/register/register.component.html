@@ -3,13 +3,38 @@
 
     <div class="formulario">
         <form #form="ngForm" [formGroup]="usuarioForm" (submit)="submit()">
-            
-            <button class="btn-login" (click)="submit()" routerLink="/login">CADASTRAR</button>
+
+            <!-- <div class="form-group">
+                <label for="nome">Nome</label>
+
+                <input type="text" name="nome" class="form-control" id="nome" formControlName="nome" required>
+
+                <div class="alert alert-danger mt-1" *ngIf="(usuarioForm.get('nome')?.errors?.required ||
+                usuarioForm.get('nome')?.errors?.minlength ||
+                usuarioForm.get('nome')?.errors?.maxlength) &&
+                (usuarioForm.get('nome')?.touched || form.submitted)">
+                    Informe seu nome (6 a 150 caracteres)
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" id="email" formControlName="email" required>
+
+                <div class="alert alert-danger mt-1"
+                    *ngIf="(usuarioForm.get('email')?.errors?.required || usuarioForm.get('email')?.errors?.email) && (usuarioForm.get('email')?.touched || form.submitted)">
+                    Informe o e-mail corretamente
+                </div>
+
+            </div> -->
+
+            <button (click)="submit()" type="submit" class="btn-login">CADASTRAR</button>
         </form>
     </div>
 
     <div class="div-botoes">
-    <button class="btn-register"  routerLink="/home">VOLTAR PARA HOME</button>
+        <button class="btn-register" routerLink="/home">VOLTAR PARA HOME</button>
     </div>
 
 </section>

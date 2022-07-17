@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Usuario } from '../model/usuario.model';
-import { AutenticacaoService } from 'src/services/autenticacao.service';
+import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 
 @Component({
   selector: 'app-home',
@@ -12,12 +12,19 @@ export class HomeComponent implements OnInit {
 
   public usuario: Usuario = new Usuario();
 
-  constructor(private auth: AutenticacaoService) { }
+  constructor(private authLogin: AutenticacaoService) { }
 
   ngOnInit(): void {
   }
 
-  public realizarLogin() {
-    this.auth.logar(this.usuario);
+  public realizarLogin(form:any) {
+
+    if (form.valid) {
+      this.authLogin.logar(this.usuario);
+    } else {
+      console.log('O formulário não está pronto!');
+    }
+
+
   }
 }

@@ -12,7 +12,6 @@ export class Usuario {
     public cpf: string;
     public pis: string;
     public senha: string;
-    public favoritos: string[];
   
     constructor()
     constructor(id?: number, nome?: string, email?: string, pais?: string, estado?: string,
@@ -31,6 +30,5 @@ export class Usuario {
      this.cpf = (cpf)? cpf : '';
      this.pis = (pis)? pis : '';
      this.senha = (senha)? senha : '';
-     this.favoritos = (favoritos?.length)? favoritos : [];
     }
   }

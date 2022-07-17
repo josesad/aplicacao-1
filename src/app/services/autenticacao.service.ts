@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/model/usuario.model';
 
-import { UsuariosService } from 'src/services/usuario.service';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,6 @@ export class AutenticacaoService {
 
   public logar(usuario: Usuario) {
 
-    console.log('logar');
 
     this.usuarioService.getAuthUsuario(usuario).subscribe(
       (usuarioAuth: Usuario[])=>{
