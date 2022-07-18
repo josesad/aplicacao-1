@@ -16,7 +16,7 @@ export class Usuario {
     constructor()
     constructor(id?: number, nome?: string, email?: string, pais?: string, estado?: string,
                 municipio?: string, cep?: number, rua?: string, numero?: number, complemento?: number,
-                pis?: string, cpf?: string, senha?: string, genero?: string, favoritos?:string[]) {
+                pis?: string, cpf?: string, senha?: string) {
      this.id = (id)? id : 0;
      this.nome = (nome)? nome : '';
      this.email = (email)? email : '';

@@ -41,16 +41,12 @@ export class RegisterComponent implements OnInit {
   public submit() {
     this.usuariosService.add(this.usuario).subscribe((resposta: any) => {
 
-      this.router.navigate(['home']);
+    this.router.navigate(['home']);
     });
   }
 
   public salvar() {
     let usuario = null;
-
-    console.log(this.usuarioForm);
-
-    console.log(this.usuarioForm.value);
 
     if (this.usuarioForm.valid) {
 

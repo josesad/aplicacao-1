@@ -4,32 +4,152 @@
     <div class="formulario">
         <form #form="ngForm" [formGroup]="usuarioForm" (submit)="submit()">
 
-            <!-- <div class="form-group">
-                <label for="nome">Nome</label>
+            <div class="form-group">
 
-                <input type="text" name="nome" class="form-control" id="nome" formControlName="nome" required>
+                <input type="text" name="nome" class="form-control" id="nome" formControlName="nome" required placeholder="Digite seu nome">
 
-                <div class="alert alert-danger mt-1" *ngIf="(usuarioForm.get('nome')?.errors?.required ||
-                usuarioForm.get('nome')?.errors?.minlength ||
-                usuarioForm.get('nome')?.errors?.maxlength) &&
+                <div class="alert alert-danger mt-1" *ngIf="(usuarioForm.get('nome')?.errors?.['required'] ||
+                usuarioForm.get('nome')?.errors?.['minlength'] ||
+                usuarioForm.get('nome')?.errors?.['maxlength']) &&
                 (usuarioForm.get('nome')?.touched || form.submitted)">
                     Informe seu nome (6 a 150 caracteres)
                 </div>
 
             </div>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" class="form-control" id="email" formControlName="email" required>
+             <div class="form-group">
+                <input type="email" name="email" class="form-control" id="email" formControlName="email" required placeholder="Digite seu e-mail">
 
                 <div class="alert alert-danger mt-1"
-                    *ngIf="(usuarioForm.get('email')?.errors?.required || usuarioForm.get('email')?.errors?.email) && (usuarioForm.get('email')?.touched || form.submitted)">
+                    *ngIf="(usuarioForm.get('email')?.errors?.['required'] || usuarioForm.get('email')?.errors?.['email']) && (usuarioForm.get('email')?.touched || form.submitted)">
                     Informe o e-mail corretamente
                 </div>
 
-            </div> -->
+            </div> 
 
-            <button (click)="submit()" type="submit" class="btn-login">CADASTRAR</button>
+            <div class="form-group">
+
+                <input type="text" name="pais" class="form-control" id="pais" formControlName="pais" required placeholder="Digite seu pais">
+
+                <div class="alert alert-danger mt-1" *ngIf="(usuarioForm.get('pais')?.errors?.['required'] ||
+                usuarioForm.get('pais')?.errors?.['maxlength']) &&
+                (usuarioForm.get('pais')?.touched || form.submitted)">
+                    Informe seu país (80 caracteres)
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <input type="text" name="estado" class="form-control" id="estado" formControlName="estado" required placeholder="Digite seu estado">
+
+                <div class="alert alert-danger mt-1" *ngIf="(usuarioForm.get('estado')?.errors?.['required'] ||
+                usuarioForm.get('estado')?.errors?.['maxlength']) &&
+                (usuarioForm.get('estado')?.touched || form.submitted)">
+                    Informe seu estado (80 caracteres)
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <input type="text" name="municipio" class="form-control" id="municipio" formControlName="municipio" required placeholder="Digite seu município">
+
+                <div class="alert alert-danger mt-1" *ngIf="(usuarioForm.get('municipio')?.errors?.['required'] ||
+                usuarioForm.get('municipio')?.errors?.['maxlength']) &&
+                (usuarioForm.get('municipio')?.touched || form.submitted)">
+                    Informe seu município (80 caracteres)
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <input type="text" name="cep" class="form-control" id="cep" formControlName="cep" required placeholder="Digite seu CEP">
+
+                <div class="alert alert-danger mt-1" *ngIf="(usuarioForm.get('cep')?.errors?.['required'] ||
+                usuarioForm.get('cep')?.errors?.['minlength'] ||
+                usuarioForm.get('cep')?.errors?.['maxlength']) &&
+                (usuarioForm.get('cep')?.touched || form.submitted)">
+                    Informe seu CEP (8 caracteres)
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <input type="text" name="rua" class="form-control" id="rua" formControlName="rua" required placeholder="Digite sua rua">
+
+                <div class="alert alert-danger mt-1" *ngIf="(usuarioForm.get('rua')?.errors?.['required'] ||
+                usuarioForm.get('rua')?.errors?.['maxlength']) &&
+                (usuarioForm.get('rua')?.touched || form.submitted)">
+                    Informe sua rua (150 caracteres)
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <input type="number" name="numero" class="form-control" id="numero" formControlName="numero" required placeholder="Digite seu número">
+
+                <div class="alert alert-danger mt-1" *ngIf="(usuarioForm.get('numero')?.errors?.['required'] ||
+                usuarioForm.get('numero')?.errors?.['maxlength']) &&
+                (usuarioForm.get('numero')?.touched || form.submitted)">
+                    Informe seu número (10 caracteres)
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <input type="number" name="complemento" class="form-control" id="complemento" formControlName="complemento" placeholder="Digite seu complemento">
+
+                <div class="alert alert-danger mt-1" *ngIf="
+                (usuarioForm.get('complemento')?.errors?.['maxlength']) &&
+                (usuarioForm.get('complemento')?.touched || form.submitted)">
+                    Informe seu complemento (10 caracteres)
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <input type="text" name="cpf" class="form-control" id="cpf" formControlName="cpf" required placeholder="Digite seu CPF">
+
+                <div class="alert alert-danger mt-1" *ngIf="(usuarioForm.get('cpf')?.errors?.['required'] ||
+                usuarioForm.get('cpf')?.errors?.['minlength'] ||
+                usuarioForm.get('cpf')?.errors?.['maxlength']) &&
+                (usuarioForm.get('cpf')?.touched || form.submitted)">
+                    Informe seu CPF (11 caracteres)
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                
+                <input type="password" name="pis" class="form-control" id="pis" formControlName="pis" required placeholder="Digite seu pis">
+        
+                <div class="alert alert-danger" *ngIf="(usuarioForm.get('pis')?.errors?.['required'] || 
+                usuarioForm.get('pis')?.errors?.['minlength']) &&
+                (usuarioForm.get('pis')?.touched || form.submitted)">
+                  Informe um pis com pelo menos 6 caracteres
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                
+                <input type="password" name="senha" class="form-control" id="senha" formControlName="senha" required placeholder="Digite sua senha">
+        
+                <div class="alert alert-danger" *ngIf="(usuarioForm.get('senha')?.errors?.['required'] || 
+                usuarioForm.get('senha')?.errors?.['minlength']) &&
+                (usuarioForm.get('senha')?.touched || form.submitted)">
+                  Informe uma senha com pelo menos 6 caracteres
+                </div>
+
+            </div>
+
+            <button (click)="submit()" type="submit" class="btn-login">ME CADASTRAR</button>
         </form>
     </div>
 
