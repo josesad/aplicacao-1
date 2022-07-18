@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
   public salvar() {
     let usuario = null;
 
-    if (this.usuarioForm.valid) {
+    if (this.usuarioForm.valid && !this.usuarioForm.pending) {
 
       usuario = {
         id: 0,
@@ -69,7 +69,9 @@ export class RegisterComponent implements OnInit {
       this.usuariosService.add( usuario ).subscribe((resposta)=>{
         this.router.navigate(['home']);
       });
-
-    } 
+      
+    } else {
+      console.log('O formulário não está pronto!');
+    }
   }
 }

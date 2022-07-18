@@ -149,7 +149,7 @@
 
             </div>
 
-            <button (click)="submit()" type="submit" class="btn-login">ME CADASTRAR</button>
+            <button [disabled]="!form.valid" type="submit" class="btn-login">ME CADASTRAR</button>
         </form>
     </div>
 
