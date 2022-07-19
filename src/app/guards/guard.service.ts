@@ -9,7 +9,7 @@ import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 @Injectable({
     providedIn: 'root'
 })
-export class AuthGuardService implements CanActivate {
+export class GuardService implements CanActivate {
     constructor(private rota: Router,
                 private authUsuario: AutenticacaoService) {}
 
@@ -20,7 +20,7 @@ export class AuthGuardService implements CanActivate {
         }
 
         this.rota.navigate(['/home']);
-        // return false;
-        return true;
+        return false;
+        // return true;
     }
 }

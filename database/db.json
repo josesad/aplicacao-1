@@ -1,0 +1,34 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Chapolin",
+      "email": "chapolin@televisa.com.mx",
+      "pais": "",
+      "estado": "",
+      "municipio": "",
+      "cep": 0,
+      "rua": "",
+      "numero": 0,
+      "complemento": 0,
+      "cpf": "",
+      "pis": "",
+      "senha": "123456"
+    },
+    {
+      "id": 2,
+      "nome": "aninha",
+      "email": "teste@gmail.com",
+      "pais": "brasil",
+      "estado": "minas",
+      "municipio": "teste",
+      "cep": "11111112",
+      "rua": "rua",
+      "numero": 2,
+      "complemento": "",
+      "cpf": "33333333333",
+      "pis": "123456",
+      "senha": "123456"
+    }
+  ]
+}

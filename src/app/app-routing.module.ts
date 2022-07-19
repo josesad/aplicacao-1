@@ -5,6 +5,8 @@ import { AreaLogadoComponent } from './area-logado/area-logado.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 
+import { GuardService } from './guards/guard.service';
+
 const routes: Routes = [
   {
     path: '',
@@ -21,7 +23,8 @@ const routes: Routes = [
   },
   {
     path: 'area-logado',
-    component: AreaLogadoComponent
+    component: AreaLogadoComponent,
+    canActivate: [GuardService]
   }
 ];
 

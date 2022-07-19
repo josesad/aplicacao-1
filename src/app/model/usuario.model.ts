@@ -12,7 +12,7 @@ export class Usuario {
     public cpf: string;
     public pis: string;
     public senha: string;
-    static nome: string = 'teste';
+
   
     constructor()
     constructor(id?: number, nome?: string, email?: string, pais?: string, estado?: string,

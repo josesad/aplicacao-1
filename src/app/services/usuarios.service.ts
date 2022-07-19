@@ -32,7 +32,7 @@ export class UsuariosService {
     return this.httpCliente.post<Usuario>('http://localhost:3000/usuarios', usuarioJSON, httpOptions);
   }
 
-  public getNomeUsuario(usuario: Usuario) {
+  public ediNomeUsuario(usuario: Usuario) {
     const usuarioPut = JSON.stringify(usuario);
     const nome = usuario.nome;
     return this.httpCliente

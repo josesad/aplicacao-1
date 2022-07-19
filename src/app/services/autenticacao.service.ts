@@ -22,8 +22,11 @@ export class AutenticacaoService {
       const [user] = usuarioAuth;
 
       if (user.email) {
+
+        localStorage.setItem('usuario', user.nome);
+
         this.autenticado = true;
-        this.router.navigate(['home']);
+        this.router.navigate(['/area-logado']);
       }
     });
   }

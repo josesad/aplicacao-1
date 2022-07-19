@@ -9,15 +9,15 @@ import { UsuariosService } from '../services/usuarios.service';
   styleUrls: ['./area-logado.component.css']
 })
 export class AreaLogadoComponent implements OnInit {
-  public nomeUsuario = "Olá " + Usuario.nome ;
+  public nomeUsuario: string = "Olá ";
   
-  constructor(private usuarioNome: UsuariosService) { }
+  constructor(private usuarioServ: UsuariosService) { }
 
   ngOnInit(): void {
-  //   this.usuarioNome.getNomeUsuario()=>{
-  //     this.nomeUsuario = usuario;
+    
+    const nome = localStorage.getItem('usuario');
+    this.nomeUsuario += nome;
 
-  //   };
-   }
+  }
 
 }
