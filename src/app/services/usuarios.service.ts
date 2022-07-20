@@ -38,4 +38,12 @@ export class UsuariosService {
     return this.httpCliente
     .put(this.urlBase+nome, usuarioPut, httpOptions);
   }
+
+  public get(id: number): Observable<Usuario> {
+    return this.httpCliente.get<Usuario>(this.urlBase+id);
+  }
+
+  public delete(id: number) {
+    return this.httpCliente.delete(this.urlBase+id);
+  }
 }
