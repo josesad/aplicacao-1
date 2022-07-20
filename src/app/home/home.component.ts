@@ -25,6 +25,6 @@ export class HomeComponent implements OnInit {
       console.log('O formulário não está pronto!');
     }
 
-
   }
+  
 }

@@ -66,23 +66,6 @@ export class RegisterComponent implements OnInit {
         senha: this.usuarioForm.value.senha
       };
 
-
-      // usuario = {
-      //   id: 0,
-      //   nome: this.usuarioForm.value.nome,
-      //   email: this.usuarioForm.value.email,
-      //   pais: '',
-      //   estado: '',
-      //   municipio: '',
-      //   cep: 0,
-      //   rua: '',
-      //   numero: 0,
-      //   complemento: 0,
-      //   cpf: '',
-      //   pis: '',
-      //   senha: this.usuarioForm.value.senha
-      // };
-
       this.usuariosService.add( usuario ).subscribe((resposta)=>{
         this.router.navigate(['/home']);
       });

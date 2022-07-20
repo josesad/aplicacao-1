@@ -21,6 +21,5 @@ export class GuardService implements CanActivate {
 
         this.rota.navigate(['/home']);
         return false;
-        // return true;
     }
 }

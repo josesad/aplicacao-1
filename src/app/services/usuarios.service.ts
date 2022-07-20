@@ -15,7 +15,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class UsuariosService {
-  private urlBase: string = 'http://localhost:3000/usuarios/';
+  private urlBase: string = 'http://localhost:3000/usuarios';
   constructor(private httpCliente: HttpClient) { }
 
   public getAuthUsuario(usuario: Usuario): Observable<Usuario[]> {
@@ -35,8 +35,7 @@ export class UsuariosService {
   public ediNomeUsuario(usuario: Usuario) {
     const usuarioPut = JSON.stringify(usuario);
     const nome = usuario.nome;
-    return this.httpCliente
-    .put(this.urlBase+nome, usuarioPut, httpOptions);
+    return this.httpCliente.put(this.urlBase+nome, usuarioPut, httpOptions);
   }
 
   public get(id: number): Observable<Usuario> {
@@ -46,4 +45,5 @@ export class UsuariosService {
   public delete(id: number) {
     return this.httpCliente.delete(this.urlBase+id);
   }
+  
 }

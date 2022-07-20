@@ -24,8 +24,8 @@ export class AreaLogadoComponent implements OnInit {
     this.nomeUsuario += nome;
 
     const codigo:number = Number(this.rotaAtiva.snapshot.paramMap.get('id'));
-    this.usuarioServ.get(codigo).subscribe((prato: Usuario)=>{
-      this.user = prato;
+    this.usuarioServ.get(codigo).subscribe((usuario: Usuario)=>{
+      this.user = usuario;
     })
   }
 

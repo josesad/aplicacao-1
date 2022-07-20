@@ -32,4 +32,4 @@ export class Usuario {
      this.pis = (pis)? pis : '';
      this.senha = (senha)? senha : '';
     }
-  }
+}

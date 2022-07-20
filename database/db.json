@@ -29,6 +29,21 @@
       "cpf": "33333333333",
       "pis": "123456",
       "senha": "123456"
+    },
+    {
+      "id": 3,
+      "nome": "nome de teste",
+      "email": "exemplo@teste.com",
+      "pais": "Brasil",
+      "estado": "Acre (AC)",
+      "municipio": "teste",
+      "cep": "11111118",
+      "rua": "rua",
+      "numero": 2,
+      "complemento": "",
+      "cpf": "33333333333",
+      "pis": "123456",
+      "senha": "123456"
     }
   ]
 }
